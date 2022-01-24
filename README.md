@@ -4,5 +4,5 @@
 ### Toggler for checking state
 
 ## In Progress
-### Server.io implementation
+### Socket.io implementation
 
