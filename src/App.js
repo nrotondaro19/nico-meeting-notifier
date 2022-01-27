@@ -19,8 +19,13 @@ const backColor = {
       open: true,
       inMeeting: true
     }
-    toggleImage = () => {
-      this.setState(state => ({ open: !state.open }))
+    toggleImage = (string) => {
+        if (string === 'yes') {
+            this.setState({open: true})   
+        } else {
+            this.setState({open: false})    
+        }
+      //this.setState(state => ({ open: !state.open }))
     }
   
     getImageName = () => this.state.open ? 'no' : 'yes'
@@ -34,9 +39,9 @@ const backColor = {
         <p>
           Are you in a <code>MEETING</code> ?
         </p>
-        <button onClick={this.toggleImage}>Indeed</button>
+        <button onClick={this.toggleImage('yes')}>Indeed</button>
         <div> Or nah </div>
-        <button onClick={this.toggleImage}>No</button>
+        <button onClick={this.toggleImage('no')}>No</button>
       </header>
     </div>
   );
